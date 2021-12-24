@@ -1,0 +1,499 @@
+
+/*-------------------------------------General-----------------------------*/
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    min-width: 95vw;
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+/*-------------------------------------header-----------------------------*/
+
+header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px solid black;
+}
+
+header figure{
+    width: 20%;
+}
+
+header img{
+    width: 50%;
+}
+
+
+header nav{
+    display: flex;
+    align-items: flex-end;
+    padding-right: 10px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.hamburger{
+    display: none;
+}
+
+nav img{
+    max-height: 10vh;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    padding: 0 40px;
+}
+
+
+/*-------------------------------------Main-----------------------------*/
+
+main .pics figure{
+    margin: 0;
+}
+
+main .pics figure img{
+    margin: 0;
+    width: 100%;
+    height: 500px;
+    margin-top: 10px;
+}
+
+.pics{
+    position: relative;
+}
+
+.art{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.26);
+    padding: 0 10px; 
+}
+
+.pics .art{
+    position: absolute;
+    bottom: 5px;
+    font-size: 0.8rem; 
+}
+
+.pics .art span{
+    opacity: 1;
+    color: white;
+}
+
+.pics .art button{
+    background-color: red;
+    color: white;
+    border-radius: 5px; 
+}
+
+#content{
+    display: flex; 
+    justify-content:space-between ;
+    margin-top: 50px;
+    border-bottom:3px solid black;
+}
+
+
+/*-------------------------------------Article----------------------------*/
+
+article{
+    width: 70%;
+    padding-left: 15px;
+}
+
+article p{
+    text-align: justify;
+}
+
+
+/*-------------------------------------Aside-----------------------------*/
+
+aside{
+    padding-right: 15px;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+
+aside h2{
+    font-size: 2rem;
+}
+aside img{
+    width: 60%;
+    height: fit-content;
+    margin: auto;
+}
+
+aside p{
+    padding-top: 20px;
+    text-align: justify;
+}
+
+aside #logos figure{
+    padding: 0;
+    margin: 0;
+    display: flex; 
+}
+
+aside #logos figure a{
+    width: 20%;
+    gap: 5px;
+    margin: 50px 0;
+}
+
+
+/*-------------------------------------Footer-----------------------------*/
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+
+.contact{
+    width: 25%;
+}
+
+.contact form{ 
+    width: 50%;
+}
+
+form input{
+    margin: 5px 0;
+}
+
+button{
+    margin: 5px 0;
+}
+
+.photos{
+    width: 40%;
+}
+
+.photos figure{
+    margin: 0;
+}
+
+.photos figure img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.partner{
+    width: 30%;    
+}
+
+.partner figure{
+    display: flex;
+    gap: 5px;
+    margin: 0;
+}
+
+.partner figure a img{
+    width: 100%;
+}
+
+
+
+/*-------------------------------------media Query-----------------------------*/
+
+@media screen and (min-width: 820px) and (max-width: 1024px) {
+
+    .hamburger{
+        display: none;
+    }    
+
+    nav a{
+        padding: 0 15px;
+    }
+
+    .photos figure img{
+        width: 80px;
+        height: 80px;
+    }   
+
+}
+
+
+/*---------------------------------------------------------------------------*/
+
+@media screen and (min-width: 767px) and (max-width: 819px) {
+
+    .hamburger{
+        display: none;
+    }
+
+    nav a{
+        padding: 0 5px;
+    }
+   
+    aside img{
+        margin: 30px auto;
+    }
+
+    aside p{
+        padding-top: 5px;
+        margin: 5px 0;
+        font-size: 0.8rem;
+    }
+
+    aside #logos figure{
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+    }
+
+    aside #logos figure a{
+        width: 50%;
+        gap: 5px;
+        margin: 0;
+    }
+
+    .photos figure img{
+       width: 60px;
+       height: 60px;
+    }  
+
+   .photos figure{
+        margin: 0;
+    }
+
+    .partner figure{
+        margin: 0;
+    }
+   
+}
+
+
+/*---------------------------------------------------------------------------*/
+
+@media screen and (min-width: 640px) and (max-width: 766px) {
+    
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;  
+        justify-content: center; 
+    }
+
+    nav a{
+        padding: 0 5px;
+    }
+
+    header nav{
+        width: none;
+        padding: 0 5px;
+        padding-right: 0px;
+    }
+
+    header figure{
+        text-align: center;
+    }
+    
+    .hamburger{
+        display: none;
+    }
+
+
+    .photos figure img{
+       width: 20%;
+       height: 40px;
+    }  
+
+    aside h2{
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    aside img{
+        margin: 10px auto;
+    }
+
+    aside p{
+        padding-top: 5px;
+        margin: 5px 0;
+        font-size: 0.8rem;
+    }
+
+    aside #logos figure{
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        padding-top: 150px;
+    }
+
+    aside #logos figure a{
+        width: 60%;
+        gap: 5px;
+        margin: 0;
+    }
+
+    form input{
+        margin: 5px 0;
+        width: 100%;
+    }
+
+    .photos figure{
+        margin: 0;
+    }
+
+    .partner figure{
+        margin: 0;
+    }
+}
+
+
+/*---------------------------------------------------------------------------*/
+
+@media screen  and (max-width: 639px) {
+
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    header nav{
+        padding: 0;
+    }
+
+    /*-------------------Burger menu---------------*/
+
+    .hamburger{
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        display: block;
+    }
+
+    .menu{
+        display: none;  
+    }
+
+    .showMenu{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .close{
+        display: none;
+        color: red;
+    }
+
+    /*--------------fin burger menu---------------*/
+    
+    header, main, footer{
+       margin: 0;
+    }
+
+    header figure {
+        margin: 20px 0 ;
+    }
+
+    header figure img{
+        width: 100%;
+    }
+
+    main .pics figure img{
+        margin: 0; 
+    }
+
+    .art span{
+        font-size: 0.6rem;
+    }
+
+    .art button{
+        height: 20px;
+    }
+
+    #content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    article{
+        width: 100%;
+        padding: 0 10px;
+    }
+    article h1{
+        text-align: center;
+        margin-top: 0;
+    }
+
+    aside{
+        width: 100%;
+    }
+    
+    article h1{
+        font-size: 1rem;
+    }
+
+    aside h2{
+        font-size: 1rem;
+    }
+
+    aside p{
+        padding: 5px 0;
+        margin: 5px 0;
+        font-size: 0.8rem;
+    }
+
+    aside #logos figure a{
+        width: 40%;
+        gap: 5px;
+        margin: 0;
+    }
+
+    form input{
+        margin: 5px 0;
+        width: 100%;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact, .photos, .partner{
+        width: 90%;
+        text-align: center;
+    }
+
+    .contact form{ 
+        width: 90%;
+    }
+
+    .partner figure {
+        width: 90%;
+    }
+
+    footer h3{
+        text-decoration: underline;
+    }
+}
+
+
+
+
+
+
+
